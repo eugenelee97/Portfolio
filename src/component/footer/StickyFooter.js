@@ -39,7 +39,7 @@ export default function StickyFooter() {
     <footer className={classes.footer}>
       <Container className={classes.footer_text} maxWidth="sm">
         <Typography variant="body1">
-          {"My sticky footer can be found here."}
+          {"This is Eugene Lee's Portfolio Website."}
         </Typography>
         <Copyright />
       </Container>

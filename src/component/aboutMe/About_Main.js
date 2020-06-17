@@ -35,15 +35,11 @@ export default function AboutTxt() {
         component="h2"
         gutterBottom
       >
-        {"Hi, I'm Eugene Lee. Lorem Ipsum is simplu dummy text of the."}
+        {"Hi, I'm Eugene Lee. I'm an Aspiring Software Engineer."}
       </Typography>
 
       <Typography className={classes.about_main} variant="body2" gutterBottom>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      Recently, I graduated with a First class in Networking Technologies which helped introduce me into the world of Computer Science. During my time studying, I have been exposed to Agile practices, Networking engineering as well as Web and Software Development. I am very passionate about learning and taking on new challenges therefore I have been spending my spare time learning React and Node and have attended many extracurricular programming activities.
       </Typography>
       <AboutSkill />
       <Chips />

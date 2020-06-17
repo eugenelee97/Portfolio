@@ -6,14 +6,16 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import pink from "@material-ui/core/colors/pink";
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
   bar: {
-    background: "transparent",
+    background: "#fafafa",
     boxShadow: "none",
-    padding: theme.spacing(2, 8)
+    padding: theme.spacing(1, 8),
+    position: "fixed",
   },
   other: {
     color: pink[400],
@@ -26,8 +28,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Nav() {
+
+export default function Nav({abtRef, pjRef}) {
   const classes = useStyles();
+
+  const handleScroll = ref => {
+    window.scrollTo({
+    behavior:"smooth",
+    top: ref.current.offsetTop
+  })
+}
 
   return (
     <div className={classes.root}>
@@ -37,9 +47,9 @@ export default function Nav() {
             Eugeni<span className={classes.other}>e</span>
           </Typography>
 
-          <Button color="black">About Me</Button>
-          <Button color="black">Project</Button>
-          <Button color="black">CV</Button>
+          <Button color="black" onClick={()=>handleScroll(abtRef)}>About Me</Button>
+          <Button color="black" onClick={()=>handleScroll(pjRef)}>Project</Button>
+          <a href="./EugeneResume.pdf" style={{textDecoration:"none"}}><Button color="black">Download CV</Button></a>
         </Toolbar>
       </AppBar>
     </div>

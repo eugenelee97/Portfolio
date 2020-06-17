@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -9,7 +9,8 @@ import AboutTxt from "./About_Main";
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    padding: theme.spacing(8, 0, 0, 0),
   },
   main: {
     padding: theme.spacing(10),
@@ -21,11 +22,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function AboutMe() {
+const AboutMe = forwardRef((props, ref) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div ref={ref} className={classes.root}>
       <CssBaseline />
       <Container component="main" className={classes.main}>
         <Grid container className={classes.about}>
@@ -35,4 +36,6 @@ export default function AboutMe() {
       </Container>
     </div>
   );
-}
+});
+
+export default AboutMe;

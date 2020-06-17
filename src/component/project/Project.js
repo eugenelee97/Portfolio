@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import ProjectCard from "./ProjectCard";
@@ -54,11 +54,11 @@ const responsive = {
   }
 };
 
-const Projects = ({ list }) => {
+const Projects = forwardRef(({ list }, ref) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div ref={ref} className={classes.root}>
       <Container className={classes.title}>
         <img className={classes.img} src="./projectLogo.png" alt="" />
 
@@ -67,7 +67,8 @@ const Projects = ({ list }) => {
       <Carousel
         additionalTransfrom={0}
         arrows={false}
-        autoPlaySpeed={3000}
+        autoPlay
+        autoPlaySpeed={5000}
         centerMode={false}
         className=""
         containerClass="container-padding-bottom"
@@ -87,15 +88,11 @@ const Projects = ({ list }) => {
         swipeable
       >
         {Object.values(list).map(item => {
-          return (
-            <div>
-              <ProjectCard {...item} key={item.id} />
-            </div>
-          );
+          return  <ProjectCard {...item} key={item.id} />;
         })}
       </Carousel>
     </div>
   );
-};
+});
 
 export default Projects;

@@ -9,7 +9,9 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     width: "100%",
-    maxWidth: "450px"
+    maxWidth: "450px",
+ 
+    
   }
 }));
 
