@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import pink from "@material-ui/core/colors/pink";
-import Chips from "./Skill_Tag";
+
 
 const useStyles = makeStyles(theme => ({
   skill_h: {
