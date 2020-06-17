@@ -5,11 +5,13 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   imgBlock: {
+  
     textAlign: "center"
   },
   img: {
+   
     width: "100%",
-    maxWidth: "450px",
+    maxWidth: "540px",
  
     
   }

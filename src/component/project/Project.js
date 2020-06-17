@@ -9,7 +9,7 @@ import { Typography, Container } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
-    padding: theme.spacing(8),
+    padding: theme.spacing(10),
     margin: "0 auto"
   },
   title: {
