@@ -9,7 +9,6 @@ import { Typography, Container } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
-    padding: theme.spacing(10),
     margin: "0 auto"
   },
   title: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     
   },
   container: {
-    padding: theme.spacing(0)
+    padding: theme.spacing(10)
   },
   img: {
     width: "50px"
@@ -64,11 +63,11 @@ const Projects = forwardRef(({ list }, ref) => {
   return (
     <div ref={ref} className={classes.root}>
       <Container className={classes.container}>
-      <Container className={classes.title}>
+      <div className={classes.title}>
         <img className={classes.img} src="./projectLogo.png" alt="" />
 
         <Typography className={classes.project}>Projects</Typography>
-        </Container>
+        </div>
         
       <Carousel
         additionalTransfrom={0}
