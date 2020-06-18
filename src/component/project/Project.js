@@ -15,7 +15,11 @@ const useStyles = makeStyles(theme => ({
   title: {
     marginBottom: "20px",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    
+  },
+  container: {
+    padding: theme.spacing(0)
   },
   img: {
     width: "50px"
@@ -59,11 +63,13 @@ const Projects = forwardRef(({ list }, ref) => {
 
   return (
     <div ref={ref} className={classes.root}>
+      <Container className={classes.container}>
       <Container className={classes.title}>
         <img className={classes.img} src="./projectLogo.png" alt="" />
 
         <Typography className={classes.project}>Projects</Typography>
-      </Container>
+        </Container>
+        
       <Carousel
         additionalTransfrom={0}
         arrows={false}
@@ -91,6 +97,7 @@ const Projects = forwardRef(({ list }, ref) => {
           return  <ProjectCard {...item} key={item.id} />;
         })}
       </Carousel>
+      </Container>
     </div>
   );
 });

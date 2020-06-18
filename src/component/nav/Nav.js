@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import pink from "@material-ui/core/colors/pink";
+import Link from "@material-ui/core/Link";
 
 
 const useStyles = makeStyles(theme => ({
@@ -49,7 +50,9 @@ export default function Nav({abtRef, pjRef}) {
 
           <Button color="black" onClick={()=>handleScroll(abtRef)}>About Me</Button>
           <Button color="black" onClick={()=>handleScroll(pjRef)}>Project</Button>
-          <a href="./EugeneResume.pdf" style={{textDecoration:"none"}}><Button color="black">Download CV</Button></a>
+          <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
+          <Button color="black">Download CV</Button>
+      </Link>
         </Toolbar>
       </AppBar>
     </div>

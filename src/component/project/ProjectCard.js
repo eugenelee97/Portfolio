@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Container } from "@material-ui/core";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -16,8 +16,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     borderRadius: 30,
     boxShadow: "none",
-    marginLeft: "20px",
-    marginRight: "20px",
     marginBottom: "40px"
   },
   media: {
@@ -63,6 +61,7 @@ const ProjectCard = ({
   };
 
   return (
+    <Container>
     <Card className={classes.root}>
       <CardHeader
         title={<Typography variant="h6">{title}</Typography>}
@@ -93,6 +92,7 @@ const ProjectCard = ({
         </CardContent>
       </Collapse>
     </Card>
+    </Container>
   );
 };
 
