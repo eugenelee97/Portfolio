@@ -21,7 +21,7 @@ export default function AboutImg() {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.imgBlock} item sm={12}>
+    <Grid className={classes.imgBlock} item sm={12} md={6}>
       <img className={classes.img} src="./Eugene.png" alt="" />
     </Grid>
   );
