@@ -34,28 +34,29 @@ const responsive = {
   desktop: {
     breakpoint: {
       max: 3000,
-      min: 1024
+      min: 1024,
     },
     items: 3,
-    partialVisibilityGutter: 40
+    partialVisibilityGutter: 40,
   },
   mobile: {
     breakpoint: {
-      max: 768,
-      min: 300
+      max: 800,
+      min: 0,
     },
     items: 1,
-    partialVisibilityGutter: 30
+    partialVisibilityGutter: 30,
   },
   tablet: {
     breakpoint: {
       max: 1024,
-      min: 768
+      min: 800,
     },
-    items: 2,
-    partialVisibilityGutter: 30
-  }
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
 };
+ 
 
 const Projects = forwardRef(({ list }, ref) => {
   const classes = useStyles();

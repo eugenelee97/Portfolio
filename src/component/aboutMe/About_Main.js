@@ -25,7 +25,7 @@ export default function AboutTxt() {
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} sm={6}>
+    <Grid item sm={12}>
       <Typography variant="h3" component="h1">
         About <span className={classes.other}>Me</span>
       </Typography>
