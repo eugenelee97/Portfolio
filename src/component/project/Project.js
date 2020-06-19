@@ -41,8 +41,8 @@ const responsive = {
   },
   mobile: {
     breakpoint: {
-      max: 520,
-      min: 0
+      max: 768,
+      min: 300
     },
     items: 1,
     partialVisibilityGutter: 30
@@ -50,7 +50,7 @@ const responsive = {
   tablet: {
     breakpoint: {
       max: 1024,
-      min: 520
+      min: 768
     },
     items: 2,
     partialVisibilityGutter: 30

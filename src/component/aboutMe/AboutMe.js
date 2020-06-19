@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    padding: theme.spacing(12, 2, 6, 2),
+    padding: theme.spacing(16, 2, 6, 2),
   },
   main: {
     padding: theme.spacing(10),
