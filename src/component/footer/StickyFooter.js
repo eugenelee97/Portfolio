@@ -19,7 +19,6 @@ function Copyright() {
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    padding: theme.spacing(3, 0),
     marginTop: "auto",
     backgroundColor:
       theme.palette.type === "dark"
@@ -28,7 +27,8 @@ const useStyles = makeStyles(theme => ({
   },
   footer_text: {
     textAlign: "left",
-    margin: theme.spacing(2, 8)
+    padding: theme.spacing(3,2)
+
   }
 }));
 
@@ -37,7 +37,7 @@ export default function StickyFooter() {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.footer_text} maxWidth="sm">
+      <Container className={classes.footer_text} disableGutters={true}>
         <Typography variant="body1">
           {"This is Eugene Lee's Portfolio Website."}
         </Typography>

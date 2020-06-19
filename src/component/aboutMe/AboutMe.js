@@ -10,15 +10,15 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    padding: theme.spacing(16, 2, 6, 2),
+    padding: theme.spacing(20, 0, 16, 0),
   },
   main: {
-    padding: theme.spacing(10),
     margin: "0 auto"
   },
 
   about: {
-    textAlign: "left"
+    textAlign: "left",
+  
   }
 }));
 
@@ -28,7 +28,7 @@ const AboutMe = forwardRef((props, ref) => {
   return (
     <div ref={ref} className={classes.root}>
       <CssBaseline />
-      <Container component="main" className={classes.main}>
+      <Container component="main">
         <Grid container className={classes.about}>
           <AboutTxt />
           <AboutImg />

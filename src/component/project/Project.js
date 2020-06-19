@@ -9,7 +9,8 @@ import { Typography, Container } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
-    margin: "0 auto"
+    margin: "0 auto",
+    padding: theme.spacing(0,2)
   },
   title: {
     marginBottom: "20px",
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     
   },
   container: {
-    padding: theme.spacing(10)
+    padding: theme.spacing(10,0)
   },
   img: {
     width: "50px"
@@ -52,7 +53,7 @@ const responsive = {
       max: 1024,
       min: 800,
     },
-    items: 1,
+    items: 2,
     partialVisibilityGutter: 30,
   },
 };
@@ -63,7 +64,7 @@ const Projects = forwardRef(({ list }, ref) => {
 
   return (
     <div ref={ref} className={classes.root}>
-      <Container className={classes.container}>
+      <Container className={classes.container}  disableGutters={true}>
       <div className={classes.title}>
         <img className={classes.img} src="./projectLogo.png" alt="" />
 

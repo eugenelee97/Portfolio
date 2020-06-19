@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import pink from "@material-ui/core/colors/pink";
 import Link from "@material-ui/core/Link";
+import Container from "@material-ui/core/Container";
 
 
 const useStyles = makeStyles(theme => ({
@@ -14,9 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   bar: {
     background: "#fafafa",
-    boxShadow: "none",
-    padding: theme.spacing(1, 8),
-    position: "fixed",
+    boxShadow: "none"
   },
   other: {
     color: pink[400],
@@ -25,7 +24,8 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     color: "black",
-    fontWeight: "bold"
+    fontWeight: "bold",
+ 
   }
 }));
 
@@ -42,18 +42,20 @@ export default function Nav({abtRef, pjRef}) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.bar}>
+      <AppBar position="fixed" className={classes.bar}>
+        <Container disableGutters={true}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Eugeni<span className={classes.other}>e</span>
           </Typography>
 
-          <Button color="black" onClick={()=>handleScroll(abtRef)}>About Me</Button>
-          <Button color="black" onClick={()=>handleScroll(pjRef)}>Project</Button>
+          <Button  onClick={()=>handleScroll(abtRef)}>About Me</Button>
+          <Button  onClick={()=>handleScroll(pjRef)}>Project</Button>
           <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
-          <Button color="black">Download CV</Button>
+          <Button >Download CV</Button>
       </Link>
         </Toolbar>
+        </Container>
       </AppBar>
     </div>
   );
