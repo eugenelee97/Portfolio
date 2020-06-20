@@ -1,7 +1,6 @@
 import React from "react";
-import { useStyles } from "./style";
 import { Chip } from "@material-ui/core";
-
+import { useStyles } from "./style";
 
 const SkillTagsAbm = ({ skills }) => {
   const classes = useStyles();

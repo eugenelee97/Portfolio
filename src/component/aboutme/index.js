@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
 import { CssBaseline, Container, Grid } from "@material-ui/core";
-import { useStyles } from "./style";
 import ImageAbm from "./image";
 import TextAbm from "./text";
+import { useStyles } from "./style";
 
 
 const MainAbm = forwardRef((props, ref) => {

@@ -1,6 +1,6 @@
 import React from "react";
-import { useStyles } from "./style";
 import { Grid } from "@material-ui/core";
+import { useStyles } from "./style";
 
 
 const ImageAbm = () => {
