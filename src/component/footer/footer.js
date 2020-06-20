@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 
-function Copyright() {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary">
       {"Copyright © "}
@@ -27,12 +27,12 @@ const useStyles = makeStyles(theme => ({
   },
   footer_text: {
     textAlign: "left",
-    padding: theme.spacing(3,2)
+    padding: theme.spacing(3, 2)
 
   }
 }));
 
-export default function StickyFooter() {
+const Footer = () => {
   const classes = useStyles();
 
   return (
@@ -46,3 +46,6 @@ export default function StickyFooter() {
     </footer>
   );
 }
+
+
+export default Footer;

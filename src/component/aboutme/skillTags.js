@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Chips() {
+const SkillTagsAbm = () => {
   const classes = useStyles();
 
   const skills = [
@@ -43,3 +43,5 @@ export default function Chips() {
     </div>
   );
 }
+
+export default SkillTagsAbm;

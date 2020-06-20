@@ -13,12 +13,12 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  card_block: {
     borderRadius: 30,
     boxShadow: "none",
     marginBottom: "40px"
   },
-  media: {
+  card_media: {
     height: 0,
     paddingTop: "56.25%" // 16:9
   },
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   expandOpen: {
     transform: "rotate(180deg)"
   },
-  projectTags: {
+  card_tags: {
     marginTop: "8px",
     marginRight: "6px"
   }
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 const ProjectCardTags = ({ tags }) => {
   const classes = useStyles();
   return tags.map(tag => (
-    <Chip className={classes.projectTags} size="small" label={tag} />
+    <Chip className={classes.card_tags} size="small" label={tag} />
   ));
 };
 
@@ -62,36 +62,36 @@ const ProjectCard = ({
 
   return (
     <Container>
-    <Card className={classes.root}>
-      <CardHeader
-        title={<Typography variant="h6">{title}</Typography>}
-        subheader={<ProjectCardTags tags={tags} />}
-      />
-      <CardMedia className={classes.media} image={image} title="Image" />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {content}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Card className={classes.card_block}>
+        <CardHeader
+          title={<Typography variant="h6">{title}</Typography>}
+          subheader={<ProjectCardTags tags={tags} />}
+        />
+        <CardMedia className={classes.card_media} image={image} title="Image" />
         <CardContent>
-          <Typography paragraph>{subcontent}</Typography>
-          <Typography paragraph>{subcontent1}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {content}
+          </Typography>
         </CardContent>
-      </Collapse>
-    </Card>
+        <CardActions disableSpacing>
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>{subcontent}</Typography>
+            <Typography paragraph>{subcontent1}</Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
     </Container>
   );
 };

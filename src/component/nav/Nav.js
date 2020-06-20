@@ -10,53 +10,55 @@ import Container from "@material-ui/core/Container";
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  nav_block: {
     flexGrow: 1
   },
-  bar: {
+  nav_bar: {
     background: "#fafafa",
     boxShadow: "none"
   },
-  other: {
+  nav_lastL: {
     color: pink[400],
     fontweight: "bold"
   },
-  title: {
+  nav_logo: {
     flexGrow: 1,
     color: "black",
     fontWeight: "bold",
- 
   }
 }));
 
 
-export default function Nav({abtRef, pjRef}) {
+const Nav = ({ abtRef, pjRef }) => {
   const classes = useStyles();
 
   const handleScroll = ref => {
     window.scrollTo({
-    behavior:"smooth",
-    top: ref.current.offsetTop
-  })
-}
+      behavior: "smooth",
+      top: ref.current.offsetTop
+    })
+  }
 
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed" className={classes.bar}>
+    <div className={classes.nav_block}>
+      <AppBar position="fixed" className={classes.nav_bar}>
         <Container disableGutters={true}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Eugeni<span className={classes.other}>e</span>
-          </Typography>
+          <Toolbar>
+            <Typography variant="h6" className={classes.nav_logo}>
+              Eugeni<span className={classes.nav_lastL}>e</span>
+            </Typography>
 
-          <Button  onClick={()=>handleScroll(abtRef)}>About Me</Button>
-          <Button  onClick={()=>handleScroll(pjRef)}>Project</Button>
-          <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
-          <Button >Download CV</Button>
-      </Link>
-        </Toolbar>
+            <Button onClick={() => handleScroll(abtRef)}>About Me</Button>
+            <Button onClick={() => handleScroll(pjRef)}>Project</Button>
+            <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
+              <Button >Download CV</Button>
+            </Link>
+          </Toolbar>
         </Container>
       </AppBar>
     </div>
   );
 }
+
+
+export default Nav;
