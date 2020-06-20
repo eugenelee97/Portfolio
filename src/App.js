@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { eugeneTheme } from "./component/theme/eugeneTheme";
-import Nav from "./component/nav/nav";
-import Footer from "./component/footer/footer";
-import MainAbm from "./component/aboutme/main";
+import Nav from "./component/nav";
+import Footer from "./component/footer";
+import MainAbm from "./component/aboutme";
 import ProjectCarousel from "./component/project/carousel";
 import { projectData } from "../src/component/data/projectData";
 
