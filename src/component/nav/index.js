@@ -16,7 +16,7 @@ const Nav = ({ abtRef, pjRef }) => {
 
   return (
     <div className={classes.nav_block}>
-      <AppBar position="fixed" className={classes.nav_bar} color="transparent">
+      <AppBar position="fixed" className={classes.nav_bar} color="inherit">
         <Container disableGutters={true}>
           <Toolbar>
             <Typography variant="h6" className={classes.nav_logo}>
