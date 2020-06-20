@@ -1,22 +1,9 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import pink from "@material-ui/core/colors/pink";
-import Grid from "@material-ui/core/Grid";
-import SkillAbm from "./skill";
+import { Typography, Grid } from "@material-ui/core";
 import SkillTagsAbm from "./skillTags";
+import skills from "./skillsData";
+import { useStyles } from "./style";
 
-const useStyles = makeStyles(theme => ({
-  text_lastL: {
-    color: pink[400],
-    fontWeight: "bold"
-  },
-
-  text_bold: {
-    lineHeight: "20px",
-    marginBottom: "30px"
-  }
-}));
 
 const TextAbm = () => {
   const classes = useStyles();
@@ -38,8 +25,11 @@ const TextAbm = () => {
       <Typography className={classes.text_bold} variant="body1" gutterBottom>
         Recently, I graduated with a First class in Networking Technologies which helped introduce me into the world of Computer Science. During my time studying, I have been exposed to Agile practices, Networking engineering as well as Web and Software Development. I am very passionate about learning and taking on new challenges therefore I have been spending my spare time learning React and Node and have attended many extracurricular programming activities.
       </Typography>
-      <SkillAbm />
-      <SkillTagsAbm />
+
+      <Typography className={classes.skill_h} variant="h6" component="h4">
+        What Skill I Have
+      </Typography>
+      <SkillTagsAbm skills={skills} />
     </Grid>
   );
 }

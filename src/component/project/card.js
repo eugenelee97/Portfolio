@@ -1,42 +1,12 @@
 import React from "react";
-import { makeStyles, Container } from "@material-ui/core";
 import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
+import {
+  Container, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse,
+  IconButton, Typography, Chip
+} from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Chip from "@material-ui/core/Chip";
+import { useStyles } from "./style";
 
-const useStyles = makeStyles(theme => ({
-  card_block: {
-    borderRadius: 30,
-    boxShadow: "none",
-    marginBottom: "40px"
-  },
-  card_media: {
-    height: 0,
-    paddingTop: "56.25%" // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest
-    })
-  },
-  expandOpen: {
-    transform: "rotate(180deg)"
-  },
-  card_tags: {
-    marginTop: "8px",
-    marginRight: "6px"
-  }
-}));
 
 const ProjectCardTags = ({ tags }) => {
   const classes = useStyles();
