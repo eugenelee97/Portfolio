@@ -12,7 +12,7 @@ export const useStyles = makeStyles(theme => ({
     },
     nav_lastL: {
         color: pink[400],
-        fontweight: "bold"
+        fontWeight: "bold"
     },
     nav_logo: {
         flexGrow: 1,
