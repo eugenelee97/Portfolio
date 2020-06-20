@@ -1,8 +1,9 @@
 import React, { forwardRef } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Typography, Container } from "@material-ui/core";
 import { useStyles } from "./style";
 import ProjectCard from "./card";
-import Carousel from "react-multi-carousel";
-import { Typography, Container } from "@material-ui/core";
 
 const responsive = {
   desktop: {
