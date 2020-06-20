@@ -3,12 +3,11 @@ import { pink } from "@material-ui/core/colors";
 
 
 export const useStyles = makeStyles(theme => ({
-    nav_block: {
-        flexGrow: 1
-    },
+
     nav_bar: {
         background: "#fafafa",
-        boxShadow: "none"
+        boxShadow: "none",
+        flexGrow: 1
     },
     nav_lastL: {
         color: pink[400],

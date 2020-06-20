@@ -15,23 +15,23 @@ const Nav = ({ abtRef, pjRef }) => {
   }
 
   return (
-    <div className={classes.nav_block}>
-      <AppBar position="fixed" className={classes.nav_bar} color="inherit">
-        <Container disableGutters={true}>
-          <Toolbar>
-            <Typography variant="h6" className={classes.nav_logo}>
-              Eugeni<span className={classes.nav_lastL}>e</span>
-            </Typography>
 
-            <Button onClick={() => handleScroll(abtRef)}>About Me</Button>
-            <Button onClick={() => handleScroll(pjRef)}>Project</Button>
-            <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
-              <Button >Download CV</Button>
-            </Link>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </div>
+    <AppBar position="fixed" className={classes.nav_bar} color="inherit">
+      <Container disableGutters={true}>
+        <Toolbar>
+          <Typography variant="h6" className={classes.nav_logo}>
+            Eugeni<span className={classes.nav_lastL}>e</span>
+          </Typography>
+
+          <Button onClick={() => handleScroll(abtRef)}>About Me</Button>
+          <Button onClick={() => handleScroll(pjRef)}>Project</Button>
+          <Link color="inherit" href="./EugeneResume.pdf" target="_blank">
+            <Button >Download CV</Button>
+          </Link>
+        </Toolbar>
+      </Container>
+    </AppBar>
+
   );
 }
 
