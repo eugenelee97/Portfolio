@@ -62,36 +62,36 @@ const ProjectCard = ({
 
   return (
     <Container>
-    <Card className={classes.card_block}>
-      <CardHeader
-        title={<Typography variant="h6">{title}</Typography>}
-        subheader={<ProjectCardTags tags={tags} />}
-      />
-      <CardMedia className={classes.card_media} image={image} title="Image" />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {content}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Card className={classes.card_block}>
+        <CardHeader
+          title={<Typography variant="h6">{title}</Typography>}
+          subheader={<ProjectCardTags tags={tags} />}
+        />
+        <CardMedia className={classes.card_media} image={image} title="Image" />
         <CardContent>
-          <Typography paragraph>{subcontent}</Typography>
-          <Typography paragraph>{subcontent1}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {content}
+          </Typography>
         </CardContent>
-      </Collapse>
-    </Card>
+        <CardActions disableSpacing>
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>{subcontent}</Typography>
+            <Typography paragraph>{subcontent1}</Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
     </Container>
   );
 };

@@ -36,9 +36,9 @@ const TextAbm = () => {
       </Typography>
 
       <Typography className={classes.text_bold} variant="body1" gutterBottom>
-      Recently, I graduated with a First class in Networking Technologies which helped introduce me into the world of Computer Science. During my time studying, I have been exposed to Agile practices, Networking engineering as well as Web and Software Development. I am very passionate about learning and taking on new challenges therefore I have been spending my spare time learning React and Node and have attended many extracurricular programming activities.
+        Recently, I graduated with a First class in Networking Technologies which helped introduce me into the world of Computer Science. During my time studying, I have been exposed to Agile practices, Networking engineering as well as Web and Software Development. I am very passionate about learning and taking on new challenges therefore I have been spending my spare time learning React and Node and have attended many extracurricular programming activities.
       </Typography>
-      <SkillAbm/>
+      <SkillAbm />
       <SkillTagsAbm />
     </Grid>
   );

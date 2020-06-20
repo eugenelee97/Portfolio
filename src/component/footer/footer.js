@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer_text: {
     textAlign: "left",
-    padding: theme.spacing(3,2)
+    padding: theme.spacing(3, 2)
 
   }
 }));

@@ -14,13 +14,13 @@ const App = () => {
 
   return (
     <ThemeProvider theme={eugeneTheme}>
-      <Nav abtRef={abtRef} pjRef={pjRef}/>
-      <MainAbm ref={abtRef}/>
+      <Nav abtRef={abtRef} pjRef={pjRef} />
+      <MainAbm ref={abtRef} />
       <ProjectCarousel list={projectData} ref={pjRef} />
       <Footer />
     </ThemeProvider>
   );
-  
+
 }
 
 export default App;

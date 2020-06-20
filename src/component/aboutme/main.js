@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     padding: theme.spacing(20, 0, 16, 0),
   },
-  main_text : {
+  main_text: {
     textAlign: "left",
   }
 }));
@@ -22,8 +22,8 @@ const MainAbm = forwardRef((props, ref) => {
 
   return (
     <div ref={ref} className={classes.main_block}>
-      <CssBaseline />
-      <Container component="main">
+      <Container component="main" >
+        <CssBaseline />
         <Grid container className={classes.main_text}>
           <TextAbm />
           <ImageAbm />

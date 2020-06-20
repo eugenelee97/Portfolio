@@ -10,16 +10,16 @@ const useStyles = makeStyles(theme => ({
   pj_block: {
     background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
     margin: "0 auto",
-    padding: theme.spacing(0,2)
+    padding: theme.spacing(0, 2)
   },
   pj_title: {
     marginBottom: "20px",
     display: "flex",
     alignItems: "center",
-    
+
   },
   pj_container: {
-    padding: theme.spacing(10,0)
+    padding: theme.spacing(10, 0)
   },
   pj_img: {
     width: "50px"
@@ -57,47 +57,47 @@ const responsive = {
     partialVisibilityGutter: 30,
   },
 };
- 
+
 
 const ProjectCarousel = forwardRef(({ list }, ref) => {
   const classes = useStyles();
 
   return (
     <div ref={ref} className={classes.pj_block}>
-      <Container className={classes.pj_container}  disableGutters={true}>
-      <div className={classes.pj_title}>
-        <img className={classes.pj_img} src="./projectLogo.png" alt="" />
+      <Container className={classes.pj_container} disableGutters={true}>
+        <div className={classes.pj_title}>
+          <img className={classes.pj_img} src="./projectLogo.png" alt="" />
 
-        <Typography className={classes.pj_font}>Projects</Typography>
+          <Typography className={classes.pj_font}>Projects</Typography>
         </div>
-        
-      <Carousel
-        additionalTransfrom={0}
-        arrows={false}
-        autoPlay
-        autoPlaySpeed={5000}
-        centerMode={false}
-        className=""
-        containerClass="container-padding-bottom"
-        dotListClass=""
-        draggable
-        focusOnSelect
-        infinite
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={responsive}
-        showDots
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-      >
-        {Object.values(list).map(item => {
-          return  <ProjectCard {...item} key={item.id} />;
-        })}
-      </Carousel>
+
+        <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={5000}
+          centerMode={false}
+          className=""
+          containerClass="container-padding-bottom"
+          dotListClass=""
+          draggable
+          focusOnSelect
+          infinite
+          itemClass=""
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={responsive}
+          showDots
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          {Object.values(list).map(item => {
+            return <ProjectCard {...item} key={item.id} />;
+          })}
+        </Carousel>
       </Container>
     </div>
   );
