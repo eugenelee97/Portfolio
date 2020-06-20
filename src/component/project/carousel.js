@@ -1,35 +1,8 @@
 import React, { forwardRef } from "react";
-
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from "./style";
 import ProjectCard from "./card";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { Typography, Container } from "@material-ui/core";
-
-const useStyles = makeStyles(theme => ({
-  pj_block: {
-    background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
-    margin: "0 auto",
-    padding: theme.spacing(0, 2)
-  },
-  pj_title: {
-    marginBottom: "20px",
-    display: "flex",
-    alignItems: "center",
-
-  },
-  pj_container: {
-    padding: theme.spacing(10, 0)
-  },
-  pj_img: {
-    width: "50px"
-  },
-  pj_font: {
-    marginLeft: "10px",
-    fontWeight: "bold",
-    fontSize: "28px"
-  }
-}));
 
 const responsive = {
   desktop: {
@@ -77,20 +50,16 @@ const ProjectCarousel = forwardRef(({ list }, ref) => {
           autoPlay
           autoPlaySpeed={5000}
           centerMode={false}
-          className=""
           containerClass="container-padding-bottom"
-          dotListClass=""
           draggable
           focusOnSelect
           infinite
-          itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
           responsive={responsive}
           showDots
-          sliderClass=""
           slidesToSlide={1}
           swipeable
         >

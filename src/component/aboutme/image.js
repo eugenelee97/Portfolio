@@ -1,16 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
+import { useStyles } from "./style";
+import { Grid } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
-  img_block: {
-    textAlign: "center"
-  },
-  img: {
-    width: "100%",
-    maxWidth: "540px",
-  }
-}));
 
 const ImageAbm = () => {
   const classes = useStyles();
