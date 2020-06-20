@@ -3,39 +3,34 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import AboutImg from "./About_Logo";
-import AboutTxt from "./About_Main";
+import ImageAbm from "./image";
+import TextAbm from "./text";
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  main_block: {
     display: "flex",
     flexDirection: "column",
     padding: theme.spacing(20, 0, 16, 0),
   },
-  main: {
-    margin: "0 auto"
-  },
-
-  about: {
+  main_text : {
     textAlign: "left",
-  
   }
 }));
 
-const AboutMe = forwardRef((props, ref) => {
+const MainAbm = forwardRef((props, ref) => {
   const classes = useStyles();
 
   return (
-    <div ref={ref} className={classes.root}>
+    <div ref={ref} className={classes.main_block}>
       <CssBaseline />
       <Container component="main">
-        <Grid container className={classes.about}>
-          <AboutTxt />
-          <AboutImg />
+        <Grid container className={classes.main_text}>
+          <TextAbm />
+          <ImageAbm />
         </Grid>
       </Container>
     </div>
   );
 });
 
-export default AboutMe;
+export default MainAbm;

@@ -1,30 +1,30 @@
 import React, { forwardRef } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Typography, Container } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  pj_block: {
     background: " linear-gradient(217deg, #F0C1DF, #FCEEDF, #F8CACA)",
     margin: "0 auto",
     padding: theme.spacing(0,2)
   },
-  title: {
+  pj_title: {
     marginBottom: "20px",
     display: "flex",
     alignItems: "center",
     
   },
-  container: {
+  pj_container: {
     padding: theme.spacing(10,0)
   },
-  img: {
+  pj_img: {
     width: "50px"
   },
-  project: {
+  pj_font: {
     marginLeft: "10px",
     fontWeight: "bold",
     fontSize: "28px"
@@ -59,16 +59,16 @@ const responsive = {
 };
  
 
-const Projects = forwardRef(({ list }, ref) => {
+const ProjectCarousel = forwardRef(({ list }, ref) => {
   const classes = useStyles();
 
   return (
-    <div ref={ref} className={classes.root}>
-      <Container className={classes.container}  disableGutters={true}>
-      <div className={classes.title}>
-        <img className={classes.img} src="./projectLogo.png" alt="" />
+    <div ref={ref} className={classes.pj_block}>
+      <Container className={classes.pj_container}  disableGutters={true}>
+      <div className={classes.pj_title}>
+        <img className={classes.pj_img} src="./projectLogo.png" alt="" />
 
-        <Typography className={classes.project}>Projects</Typography>
+        <Typography className={classes.pj_font}>Projects</Typography>
         </div>
         
       <Carousel
@@ -103,4 +103,4 @@ const Projects = forwardRef(({ list }, ref) => {
   );
 });
 
-export default Projects;
+export default ProjectCarousel;
